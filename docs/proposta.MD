@@ -8,7 +8,7 @@ A proposta deve apresentar uma ideia simples, clara e viável para ser desenvolv
 
 Escreva aqui o nome provisório do jogo.
 
-Exemplo:
+XO Duel
 
 > Corrida dos Obstáculos
 
@@ -16,8 +16,8 @@ Exemplo:
 
 Liste os integrantes do grupo.
 
-- Nome 1:
-- Nome 2:
+- Nome 1: Brendon Leonardo Martins Alves
+- Nome 2: Daniel Eiji Serra Tsuruga
 - Nome 3:
 - Nome 4:
 
@@ -40,7 +40,7 @@ Exemplos:
 - jogo de clique rápido;
 - jogo de sobrevivência simples.
 
-Tipo escolhido pelo grupo:
+Tipo escolhido pelo grupo: Jogo da Velha 
 
 > Escreva aqui.
 
@@ -55,7 +55,7 @@ Procure responder:
 - O que o jogador precisa fazer?
 - Quais desafios aparecem durante a partida?
 
-Descrição:
+Descrição: O jogo exibirá um tabuleiro 3x3 na tela. Dois jogadores se alternam realizando jogadas, marcando os símbolos X e O nas casas disponíveis. O objetivo é formar uma linha, coluna ou diagonal com três símbolos iguais antes do adversário.
 
 > Escreva aqui.
 
@@ -73,7 +73,7 @@ Exemplos:
 - evitar obstáculos;
 - quebrar todos os blocos.
 
-Objetivo:
+Objetivo: Conseguir alinhar três símbolos iguais em uma linha, coluna ou diagonal antes do outro jogador.
 
 > Escreva aqui.
 
@@ -91,11 +91,11 @@ Exemplo:
 
 Regras do grupo:
 
-- Regra 1:
-- Regra 2:
-- Regra 3:
-- Regra 4:
-- Regra 5:
+- Regra 1: O jogador X inicia a partida.
+- Regra 2: Os jogadores jogam alternadamente.
+- Regra 3: Uma casa ocupada não pode ser utilizada novamente.
+- Regra 4: O jogo verifica automaticamente vitória ou empate.
+- Regra 5: A partida termina quando houver vencedor ou empate.
 
 ## 7. Condição de vitória
 
@@ -109,7 +109,7 @@ Exemplos:
 - responder uma quantidade mínima de perguntas;
 - quebrar todos os blocos.
 
-Condição de vitória:
+Condição de vitória: O jogador vence ao formar uma sequência de três símbolos iguais em uma linha, coluna ou diagonal
 
 > Escreva aqui.
 
@@ -125,7 +125,7 @@ Exemplos:
 - errar muitas perguntas;
 - deixar a bola cair, no caso de Breakout ou Pong.
 
-Condição de derrota ou encerramento:
+Condição de derrota ou encerramento: O jogador perde quando o adversário forma uma sequência vencedora. A partida também pode terminar em empate quando todas as casas estiverem preenchidas sem vencedor.
 
 > Escreva aqui.
 
@@ -135,11 +135,11 @@ Descreva os principais elementos que farão parte do jogo.
 
 ## Jogador ou elemento principal
 
-Exemplo:
+Exemplo: 
 
 > Um personagem controlado pelas setas do teclado.
 
-Descrição:
+Descrição: Dois jogadores representados pelos símbolos X e O.
 
 > Escreva aqui.
 
@@ -149,7 +149,7 @@ Exemplo:
 
 > Obstáculos aparecem em posições aleatórias e devem ser evitados.
 
-Descrição:
+Descrição: O principal desafio é impedir que o adversário complete uma sequência vencedora.
 
 > Escreva aqui.
 
@@ -159,7 +159,7 @@ Exemplo:
 
 > Moedas aparecem na tela e aumentam a pontuação quando coletadas.
 
-Descrição:
+Descrição: As nove casas do tabuleiro, que podem ser selecionadas pelos jogadores.
 
 > Escreva aqui.
 
@@ -169,7 +169,7 @@ Exemplo:
 
 > O jogador começa com 3 vidas e ganha 10 pontos por item coletado.
 
-Descrição:
+Descrição: Será exibido o vencedor da partida. Opcionalmente poderá existir um placar acumulado entre várias rodadas.
 
 > Escreva aqui.
 
@@ -188,9 +188,9 @@ Exemplo:
 
 Controles do grupo:
 
-- Tecla/comando:
-- Tecla/comando:
-- Tecla/comando:
+- Tecla/comando: Mouse : selecionar uma casa do tabuleiro.
+- Tecla/comando: Tecla R : reiniciar a partida
+- Tecla/comando: Tecla ESC : encerrar o jogo.
 
 ## 11. Organização inicial do código
 
@@ -205,6 +205,12 @@ Exemplo:
 - `src/dados.py`: contém funções de leitura e escrita de arquivos.
 
 Organização planejada:
+main.py: inicialização do jogo.
+src/game.py: loop principal e gerenciamento da partida.
+src/board.py: controle do tabuleiro e validação das jogadas.
+src/player.py: gerenciamento dos jogadores.
+src/utils.py: funções auxiliares.
+tests/: testes das regras do jogo.
 
 > Escreva aqui.
 
@@ -221,6 +227,9 @@ Exemplo:
 - fonte personalizada.
 
 Recursos previstos:
+Imagens simples para os símbolos X e O.
+Fonte para exibição de mensagens.
+Sons opcionais para jogadas e vitória.
 
 > Escreva aqui.
 
@@ -245,9 +254,9 @@ Exemplos:
 
 Dificuldades previstas:
 
-- Dificuldade 1:
-- Dificuldade 2:
-- Dificuldade 3:
+- Dificuldade 1: Implementação da verificação de vitória
+- Dificuldade 2: Organização do projeto utilizando o template fornecido.
+- Dificuldade 3: Desenvolvimento e execução dos testes.
 
 ## 14. Escopo mínimo para a entrega final
 
@@ -259,7 +268,7 @@ Exemplo:
 
 > A versão mínima do jogo terá um personagem controlado pelo teclado, obstáculos aparecendo na tela, sistema de vidas, sistema de pontuação e tela de fim de jogo.
 
-Escopo mínimo:
+Escopo mínimo: O jogo deverá possuir tabuleiro funcional, alternância entre jogadores, verificação de vitória, detecção de empate, reinício de partida e interface gráfica básica utilizando pygame.
 
 > Escreva aqui.
 
@@ -281,6 +290,8 @@ Exemplos:
 
 Melhorias possíveis:
 
-- Melhoria 1:
-- Melhoria 2:
-- Melhoria 3:
+- Melhoria 1: Modo contra computador.
+- Melhoria 2: Sistema de placar entre partidas.
+- Melhoria 3: Efeitos sonoros e animações.
+- Melhoria 4: Tela inicial e menu.
+- Melhoria 5: Diferentes temas visuais.
